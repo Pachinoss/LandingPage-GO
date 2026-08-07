@@ -14,8 +14,8 @@
 
 Landing page personal y de una sola vista (single-page) que funciona como **carta de presentación digital** de Germán Augusto Orozco Murcia. Actúa como la puerta de entrada a tres destinos principales:
 
-1. **La página estrella** del proyecto OmniPlay.
-2. **El portafolio general** de proyectos (petsalud, Zancada Running, y otros).
+1. **La página estrella** del proyecto buengusto.
+2. **El portafolio general** de proyectos (minichatgpt, petsalud, Zancada Running, y otros).
 3. **El canal de contacto directo** con el profesional.
 
 ### 1.2 Propósito
@@ -27,7 +27,7 @@ Reducir al mínimo la fricción entre un visitante (reclutador, cliente o colabo
 | # | Objetivo | Tipo |
 |---|----------|------|
 | G1 | Posicionar a Germán como desarrollador senior en Web, Móvil e IA | Cualitativo |
-| G2 | Dirigir visitantes hacia la **Página Estrella (OmniPlay)** como demostración principal de calidad técnica | Cuantitativo |
+| G2 | Dirigir visitantes hacia la **Página Estrella (buengusto)** como demostración principal de calidad técnica | Cuantitativo |
 | G3 | Derivar tráfico hacia el **Portfolio general** | Cuantitativo |
 | G4 | Facilitar el contacto directo (correo) para oportunidades laborales o de servicio | Cuantitativo |
 | G5 | Transmitir coherencia de marca: minimalista, moderno y con front-end cuidado (reflejar el propio stack del profesional) | Cualitativo |
@@ -59,7 +59,7 @@ Formato: `Como [rol], quiero [acción] para [beneficio].`
 
 ### Prioridad: Esencial (v1)
 
-- **US-01 (Rc):** Como reclutador, **quiero** ir directamente a la página estrella **para** evaluar la calidad del código y la arquitectura del proyecto OmniPlay.
+- **US-01 (Rc):** Como reclutador, **quiero** ir directamente a la página estrella **para** evaluar la calidad del código y la arquitectura del proyecto buengusto.
 - **US-02 (Rc):** Como reclutador, **quiero** revisar el portfolio completo **para** reconocer la amplitud de skills (Web + Móvil + IA) del candidato.
 - **US-03 (Cl):** Como cliente potencial, **quiero** ver un resumen de trayectoria y habilidades **para** confiar en la contratación del servicio.
 - **US-04 (TU):** Como visitante, **quiero** un diseño que cargue rápido y se vea impecable en móvil **para** no perder el interés.
@@ -83,12 +83,12 @@ Cada requisito tiene criterio de aceptación (CA).
 - **CA-FR02:** El título la propuesta de valor es visible al instante y con jerarquía tipográfica clara.
 
 ### FR-02 — CTAs duales
-- **Descripción:** Dos llamados de acción: uno **destacado** hacia la **página estrella (OmniPlay)** y otro **secundario** hacia el **Portfolio general**.
+- **Descripción:** Dos llamados de acción: uno **destacado** hacia la **página estrella (buengusto)** y otro **secundario** hacia el **Portfolio general**.
 - **CTA-Primario:** *"Ver Proyecto Estrella →"* (botón destacado, color de acento).
 - **CTA-Secundario:** *"Explorar el Portfolio"* (botón con estilo outline/secondario).
 - **CA-FR03:** Ambos CTAs visibles dentro del hero, sin requiere scroll.
-- **CA-FR04:** El CTA primario es el que mayor contraste visual / jerarquía para dirigir la atención hacia OmniPlay (objetivo O2).
-- **CA-FR05:** Enlazan a las URL reales (OmniPlay y portfolio) y se abren correctamente.
+- **CA-FR04:** El CTA primario es el que mayor contraste visual / jerarquía para dirigir la atención hacia buengusto (objetivo O2).
+- **CA-FR05:** Enlazan a las URL reales (buengusto y portfolio) y se abren correctamente.
 
 ### FR-03 — Sección Sobre Mí / Trayectoria
 - **Descripción:** Biografía concisa orientada a logros, talón del stack y resumen de trayectoria profesional.
@@ -166,13 +166,13 @@ Cada requisito tiene criterio de aceptación (CA).
 ## 7. Métricas de Éxito (Success Metrics)
 
 ### 7.1 North Star Metric
-**Tasa de conversión de CTA primario (OmniPlay):** % de visitantes que hacen clic en "Ver Proyecto Estrella".
+**Tasa de conversión de CTA primario (buengusto):** % de visitantes que hacen clic en "Ver Proyecto Estrella".
 
 ### 7.2 Métricas de indicador (KPI)
 
 | Métrica | Objetivo |
 |---------|----------|
-| CTR CTA primario → OmniPlay (hero) | ≥ 20% de visitas |
+| CTR CTA primario → buengusto (hero) | ≥ 20% de visitas |
 | CTR CTA secundario → Portfolio | ≥ 10% de visitas |
 | Tasa de clics en email de contacto | ≥ 5% |
 | Segmento por vista (Sobre mi / Hero) | Empezar a realizarse de forma visibilidad |
@@ -201,7 +201,7 @@ Cada requisito tiene criterio de aceptación (CA).
 | ID | Elemento | Impacto | Esfuerzo | Prioridad |
 |----|----------|---------|----------|-----------|
 | FR-01 | Hero + propuesta de valor | Alto | Bajo | P0 |
-| FR-02 | CTAs duales (OmniPlay / Portfolio) | Alto | Bajo | P0 |
+| FR-02 | CTAs duales (buengusto / Portfolio) | Alto | Bajo | P0 |
 | FR-03 | Sobre mi / Trayectoria | Alto | Medio | P0 |
 | FR-04 | Contacto (mailto + ubicación) | Alto | Bajo | P0 |
 | NFR-Rend | Optimización rendimiento | Alto | Medio | P0 |

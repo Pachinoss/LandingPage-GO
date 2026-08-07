@@ -4,30 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Germán Augusto Orozco Murcia — Desarrollador de Software</title>
-  <meta name="description" content="Desarrollador de software especializado en web, aplicaciones móviles e inteligencia artificial. Conoce mi proyecto estrella, mi portfolio y ponte en contacto." />
+  <meta name="description" content="Desarrollador de software especializado en desarrollo web, aplicaciones móviles e inteligencia artificial. Proyecto estrella buengusto, portfolio y contacto." />
   <meta name="author" content="Germán Augusto Orozco Murcia" />
-  <meta name="keywords" content="desarrollador, software, web, movil, inteligencia artificial, PHP, JavaScript, Kotlin, Swift, MVC" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Germán Augusto Orozco Murcia — Desarrollador de Software" />
-  <meta property="og:description" content="Desarrollador especializado en web, apps móviles e inteligencia artificial." />
+  <meta property="og:description" content="Desarrollo web · Apps móviles · Inteligencia Artificial" />
   <meta property="og:url" content="https://usuario.github.io/landing/" />
-  <meta property="og:image" content="favicon.svg" />
+  <meta property="og:image" content="./assets/og-cover.png" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
 
-  <!-- Tipografía -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
   <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
+  <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#inicio" aria-label="Inicio">
         <span class="brand__mark" aria-hidden="true">GO</span>
@@ -40,9 +34,9 @@
         <ul class="nav__menu" id="nav-menu">
           <li><a class="nav__link" href="#inicio">Inicio</a></li>
           <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav__link" href="#especialidad">Especialización</a></li>
           <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
           <li><a class="nav__link" href="#contacto">Contacto</a></li>
-          <li class="nav__cta"><a class="btn btn--primary btn--sm" href="#contacto">Hablemos</a></li>
         </ul>
       </nav>
     </div>
@@ -51,86 +45,83 @@
   <main id="main">
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
-      <div class="hero__bg" aria-hidden="true">
-        <span class="hero__blob hero__blob--1"></span>
-        <span class="hero__blob hero__blob--2"></span>
-        <span class="hero__grid"></span>
-      </div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow reveal"><span class="hero__dot"></span> Hola, soy</p>
-          <h1 class="hero__title reveal">Germán Augusto<br />Orozco Murcia</h1>
-          <p class="hero__role reveal">Desarrollador de Software · Web · Apps Móviles · IA</p>
-          <p class="hero__lead reveal">
-            Construyo interfaces limpias y productos sólidos con PHP, JavaScript, Kotlin, Swift y MySQL,
-            bajo arquitecturas MVC. Este es mi proyecto estrella y la puerta a mi portfolio.
+          <p class="hero__eyebrow">Desarrollador de Software</p>
+          <h1 class="hero__title">Germán Augusto<br />Orozco Murcia</h1>
+          <p class="hero__role">Web · Aplicaciones Móviles · Inteligencia Artificial</p>
+          <p class="hero__lead">
+            Diseño y desarrollo productos digitales sólidos con PHP, JavaScript, Kotlin, Swift y MySQL,
+            bajo arquitecturas MVC y con una experiencia de usuario cuidada en cada detalle.
           </p>
-          <div class="hero__actions reveal">
-            <a class="btn btn--primary" href="#pagina-estrella">Ver Proyecto Estrella <span aria-hidden="true">→</span></a>
-            <a class="btn btn--secondary" href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener">Explorar el Portfolio</a>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#proyecto-estrella">Ver Proyecto Estrella</a>
+            <a class="btn btn--secondary" href="https://pachinoss.github.io/PortFolio-Personal/" target="_blank" rel="noopener noreferrer">Explorar el Portfolio</a>
           </div>
-          <ul class="hero__social" aria-label="Redes sociales">
-            <li><a class="hero__social-link" href="mailto:joanpabloorozco@gmail.com" aria-label="Email">✉︎</a></li>
-            <li><a class="hero__social-link" href="https://github.com/pachinoss" target="_blank" rel="noopener" aria-label="GitHub">▶︎</a></li>
-            <li><a class="hero__social-link" href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener" aria-label="Portfolio">⚑</a></li>
-          </ul>
         </div>
 
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="hero-card">
-            <div class="hero-card__top">
-              <span class="hero-card__dots"><i></i><i></i><i></i></span>
-              <span class="hero-card__file">dev.js</span>
-            </div>
-            <div class="hero-card__body">
-              <span class="hero-card__comment">// Creo productos que resuelven problemas</span>
-              <div class="hero-card__line"><span class="tok">const</span> stack <span class="op">=</span> [</div>
-              <div class="hero-card__line ind-1"><span class="str">'PHP'</span><span class="op">,</span> <span class="str">'MySQL'</span><span class="op">,</span> <span class="str">'JS'</span></div>
-              <div class="hero-card__line ind-1"><span class="str">'MVC'</span><span class="op">,</span> <span class="str">'Kotlin'</span><span class="op">,</span> <span class="str">'Swift'</span></div>
-              <div class="hero-card__line">];</div>
-              <br />
-              <div class="hero-card__line"><span class="tok">class</span> <span class="fn">Dev</span> <span class="op">extends</span> <span class="fn">Ingeniero</span> {</div>
-              <div class="hero-card__line ind-1"><span class="fn">build</span>();</div>
-              <div class="hero-card__line ind-1">}</div>
-            </div>
+        <aside class="hero__side">
+          <div class="monogram" aria-hidden="true">GO</div>
+          <div class="card hero__card">
+            <p class="hero__card-title">Disponibilidad</p>
+            <p class="hero__card-status"><span class="dot" aria-hidden="true"></span> Abierto a oportunidades</p>
+            <ul class="hero__card-list">
+              <li><span>Web</span><strong>PHP · JS</strong></li>
+              <li><span>Móvil</span><strong>Kotlin · Swift</strong></li>
+              <li><span>Datos</span><strong>MySQL</strong></li>
+              <li><span>Arquitectura</span><strong>MVC</strong></li>
+            </ul>
           </div>
-          <div class="hero-card__badge">
-            <span class="hero-card__badge-dot"></span>
-            <span class="hero-card__badge-txt">Abierto a<br />oportunidades</span>
+          <div class="hero__links">
+            <a href="#" class="hero__link">LinkedIn</a>
+            <a href="#" class="hero__link">GitHub</a>
+            <a href="#contacto" class="hero__link">Email</a>
           </div>
-        </div>
-      </div>
-
-      <div class="hero__term" aria-hidden="true">
-        <div class="container">
-          <div class="term">
-            <span class="term__prompt">$</span> <span class="term__cmd">about me</span>
-            <span class="term__out">→ Dev web · móvil · IA bajo MVC</span>
-          </div>
-        </div>
+        </aside>
       </div>
     </section>
 
     <!-- ===== SOBRE MÍ ===== -->
-    <section class="section" id="sobre-mi">
+    <section class="section section--alt" id="sobre-mi">
       <div class="container">
-        <header class="section__head reveal">
-          <span class="section__kicker"><span class="kick-comment">//</span> Sobre mí</span>
-          <h2 class="section__title">Desarrollo con propósito</h2>
-        </header>
-        <div class="about reveal">
-          <p class="section__lead">
-            Desarrollador de software con experiencia en desarrollo web, aplicaciones móviles e inteligencia artificial.
-            Combino código limpio, arquitecturas MVC y un front-end cuidado para entregar productos modernos y funcionales.
+        <p class="kicker">Sobre mí</p>
+        <h2 class="section__title">Construyo productos completos, de la lógica al pixel</h2>
+        <div class="split">
+          <p>
+            Desarrollador de software con experiencia en <strong>desarrollo web</strong>,
+            <strong>programación de aplicaciones móviles</strong> e <strong>implementaciones de inteligencia artificial</strong>.
+            Trabajo con arquitecturas MVC y cuido que cada producto combine una lógica sólida, un código
+            mantenible y una experiencia de usuario bien resuelta.
           </p>
-          <div class="skills" aria-label="Stack tecnológico">
-            <span class="skill"><span class="skill__name">PHP</span><em class="skill__bar skill__bar--90"></em></span>
-            <span class="skill"><span class="skill__name">JavaScript</span><em class="skill__bar skill__bar--80"></em></span>
-            <span class="skill"><span class="skill__name">Kotlin</span><em class="skill__bar skill__bar--75"></em></span>
-            <span class="skill"><span class="skill__name">Swift</span><em class="skill__bar skill__bar--70"></em></span>
-            <span class="skill"><span class="skill__name">MySQL</span><em class="skill__bar skill__bar--90"></em></span>
-            <span class="skill"><span class="skill__name">Arquitecturas MVC</span><em class="skill__bar skill__bar--95"></em></span>
-          </div>
+          <p>
+            Me implico en cada capa del ciclo: modelado de datos, lógica de negocio, integración con APIs y
+            una interfaz clara y moderna. El resultado son soluciones funcionales, escalables y con acabado profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESPECIALIZACIÓN ===== -->
+    <section class="section" id="especialidad">
+      <div class="container">
+        <p class="kicker">Especialización</p>
+        <h2 class="section__title">Áreas de experiencia</h2>
+        <div class="specs">
+          <article class="spec">
+            <span class="spec__icon" aria-hidden="true">Web</span>
+            <h3 class="spec__title">Desarrollo Web</h3>
+            <p class="spec__desc">Aplicaciones y plataformas web con PHP y JavaScript, arquitecturas MVC y bases de datos MySQL.</p>
+          </article>
+          <article class="spec">
+            <span class="spec__icon" aria-hidden="true">Mobile</span>
+            <h3 class="spec__title">Apps Móviles</h3>
+            <p class="spec__desc">Aplicaciones nativas con Kotlin y Swift, enfocadas en rendimiento y experiencia de usuario.</p>
+          </article>
+          <article class="spec">
+            <span class="spec__icon" aria-hidden="true">AI</span>
+            <h3 class="spec__title">Inteligencia Artificial</h3>
+            <p class="spec__desc">Asistentes y herramientas con IA: chatbots, sistemas RAG y automatización de procesos.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -138,77 +129,88 @@
     <!-- ===== PROYECTOS ===== -->
     <section class="section section--alt" id="proyectos">
       <div class="container">
-        <header class="section-head reveal">
-          <span class="section__kicker"><span class="kick-comment">//</span> Trabajo destacado</span>
-          <h2 class="section__title">Proyectos</h2>
-          <p class="section__lead">El proyecto estrella demuestra la calidad de mi código y arquitectura. El portfolio agrupa el resto de mi trabajo.</p>
-        </header>
+        <p class="kicker">Proyectos</p>
+        <h2 class="section__title">Trabajo destacado</h2>
 
-        <!-- Página estrella -->
-        <article class="featured reveal" id="pagina-estrella">
-          <div class="featured__shine" aria-hidden="true"></div>
+        <!-- Proyecto estrella -->
+        <article class="featured" id="proyecto-estrella">
           <div class="featured__content">
-            <div class="featured__badge">Página estrella</div>
-            <h3 class="featured__title">El Buen Gusto</h3>
+            <p class="featured__badge">Proyecto estrella</p>
+            <h3 class="featured__title">buengusto</h3>
             <p class="featured__desc">
-              Web de restaurante de cocina colombiana con carta digital por mesa mediante QR,
-              arquitectura MVC, panel de administración y pedidos en línea.
+              Plataforma de pedidos de comida y comandas. Catálogo, carrito, seguimiento de pedidos y una
+              interfaz pensada para un flujo de compra rápido y claro, construida con arquitectura MVC.
             </p>
-            <ul class="featured__tags" aria-label="Tecnologías">
-              <li>PHP</li><li>MySQL</li><li>MVC</li><li>QR</li><li>Bootstrap</li>
-            </ul>
-            <div class="featured__actions">
-              <a class="btn btn--light btn--sm" href="http://buengustopaisa.atwebpages.com/index.php" target="_blank" rel="noopener" aria-label="Visitar el proyecto El Buen Gusto">Visitar El Buen Gusto <span aria-hidden="true">→</span></a>
-              <a class="btn btn--ghost btn--sm" href="#portafolio">Ver code <span aria-hidden="true">→</span></a>
+            <div class="featured__tags">
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">MVC</span>
             </div>
+            <a class="btn btn--primary" href="http://buengustopaisa.atwebpages.com/index.php" target="_blank" rel="noopener noreferrer" aria-label="Visitar el proyecto buengusto">Visitar buengusto</a>
           </div>
-          <div class="featured__mockup" aria-hidden="true">
-            <div class="mockup">
-              <div class="mockup__bar"><span></span><span></span><span></span></div>
-              <div class="mockup__nav"></div>
-              <div class="mockup__row"><div class="mockup__img"></div><div class="mockup__img"></div><div class="mockup__img"></div></div>
+          <div class="featured__visual" aria-hidden="true">
+            <div class="mock">
+              <div class="mock__bar">
+                <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
+              </div>
+              <div class="mock__body">
+                <span class="mock__row mock__row--lg"></span>
+                <span class="mock__row"></span>
+                <span class="mock__row mock__row--sm"></span>
+                <span class="mock__card"></span>
+                <span class="mock__card mock__card--offset"></span>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Portfolio -->
-        <div class="cards" id="portafolio">
-          <article class="card reveal">
-            <span class="card__tag">Sistema web</span>
+        <p class="kicker kicker--spaced">Portfolio</p>
+        <div class="cards">
+          <article class="card">
+            <h4 class="card__title">buengusto</h4>
+            <p class="card__desc">Plataforma de pedidos de comida y comandas con arquitectura MVC.</p>
+            <div class="card__tags"><span class="tag tag--sm">PHP</span><span class="tag tag--sm">MVC</span></div>
+            <a class="card__link" href="#">Ver proyecto</a>
+          </article>
+          <article class="card">
+            <h4 class="card__title">minichatgpt</h4>
+            <p class="card__desc">Asistente conversacional estilo ChatGPT impulsado por APIs de IA.</p>
+            <div class="card__tags"><span class="tag tag--sm">IA</span><span class="tag tag--sm">API</span></div>
+            <a class="card__link" href="#">Ver proyecto</a>
+          </article>
+          <article class="card">
             <h4 class="card__title">petsalud</h4>
             <p class="card__desc">Sistema de gestión veterinaria desarrollado con patrón MVC.</p>
-            <ul class="card__tags"><li>PHP</li><li>MySQL</li></ul>
-            <a class="card__link" href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">→</span></a>
+            <div class="card__tags"><span class="tag tag--sm">PHP</span><span class="tag tag--sm">MySQL</span></div>
+            <a class="card__link" href="#">Ver proyecto</a>
           </article>
-          <article class="card reveal">
-            <span class="card__tag">IA</span>
+          <article class="card">
             <h4 class="card__title">Zancada Running</h4>
             <p class="card__desc">Asistente automatizado basado en RAG para runners.</p>
-            <ul class="card__tags"><li>Python</li><li>RAG</li></ul>
-            <a class="card__link" href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener">Ver proyecto <span aria-hidden="true">→</span></a>
+            <div class="card__tags"><span class="tag tag--sm">IA</span><span class="tag tag--sm">RAG</span></div>
+            <a class="card__link" href="#">Ver proyecto</a>
           </article>
         </div>
-        <p class="portfolio-more reveal">
-          <a class="btn btn--secondary" href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener">Visitar mi portfolio completo <span aria-hidden="true">→</span></a>
-        </p>
       </div>
     </section>
 
     <!-- ===== CONTACTO ===== -->
     <section class="section" id="contacto">
       <div class="container">
-        <header class="section-head reveal">
-          <span class="section__kicker"><span class="kick-comment">//</span> Contacto</span>
-          <h2 class="section__title">¿Hablemos de tu proyecto?</h2>
-          <p class="section__lead">¿Tienes una oportunidad o un proyecto en mente? Me encantará escucharte.</p>
-        </header>
+        <p class="kicker">Contacto</p>
+        <h2 class="section__title">Hablemos</h2>
+        <p class="section__lead">
+          ¿Tienes una oportunidad profesional o un proyecto en mente? Escríbeme y te responderé lo antes posible.
+        </p>
         <div class="contact">
-          <a class="contact__item contact__item--mail reveal" href="mailto:joanpabloorozco@gmail.com?subject=Contacto%20desde%20tu%20landing">
-            <span class="contact__icon" aria-hidden="true">✉︎</span>
-            <span class="contact__label">Email</span>
+          <a class="contact__item" href="mailto:joanpabloorozco@gmail.com?subject=Contacto%20desde%20tu%20landing">
+            <span class="contact__icon" aria-hidden="true">✉</span>
+            <span class="contact__label">Correo</span>
             <span class="contact__value">joanpabloorozco@gmail.com</span>
           </a>
-          <a class="contact__item contact__item--location reveal"
+          <a class="contact__item"
              href="https://www.google.com/maps/search/?api=1&query=Calle+Francisco+Grande+Covián+62"
              target="_blank" rel="noopener noreferrer">
             <span class="contact__icon" aria-hidden="true">⌖</span>
@@ -222,16 +224,33 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> Germán Augusto Orozco Murcia</p>
-      <div class="footer__links">
-        <a href="https://github.com/pachinoss" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://pachinoss.github.io/Portafolio/" target="_blank" rel="noopener">Portfolio</a>
-        <a href="mailto:joanpabloorozco@gmail.com">Email</a>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#inicio" aria-label="Inicio">
+            <span class="brand__mark" aria-hidden="true">GO</span>
+            <span class="brand__name">Germán Orozco</span>
+          </a>
+          <p class="footer__role">Desarrollador de Software · Web · Móvil · IA</p>
+        </div>
+        <nav class="footer__nav" aria-label="Navegación del pie">
+          <a class="footer__link" href="#inicio">Inicio</a>
+          <a class="footer__link" href="#sobre-mi">Sobre mí</a>
+          <a class="footer__link" href="#especialidad">Especialización</a>
+          <a class="footer__link" href="#proyectos">Proyectos</a>
+          <a class="footer__link" href="#contacto">Contacto</a>
+        </nav>
+        <div class="footer__contact">
+          <a class="footer__link" href="mailto:joanpabloorozco@gmail.com">joanpabloorozco@gmail.com</a>
+          <p class="footer__link footer__link--static">Calle Francisco Grande Covián 62</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Germán Augusto Orozco Murcia. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
