@@ -264,27 +264,49 @@ a { color: inherit; text-decoration: none; }
 }
 .tag--sm { padding: 0.22rem 0.7rem; font-size: 0.72rem; }
 
-/* Mock visual del proyecto */
+/* Carrusel del proyecto */
 .featured__visual { display: none; }
-.mock {
+.carousel {
+  position: relative;
   border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--bg-alt); overflow: hidden;
   box-shadow: var(--shadow-md);
 }
-.mock__bar {
-  display: flex; gap: 6px; padding: 0.75rem 0.95rem;
-  border-bottom: 1px solid var(--border); background: var(--surface);
+.carousel__track { display: grid; }
+.carousel__slide {
+  grid-area: 1 / 1;
+  position: relative;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
 }
-.mock__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border); }
-.mock__dot:first-child { background: #f87171; }
-.mock__dot:nth-child(2) { background: #fbbf24; }
-.mock__dot:nth-child(3) { background: #34d399; }
-.mock__body { padding: var(--space-3); display: grid; gap: 0.75rem; }
-.mock__row { height: 12px; border-radius: 6px; background: #e8edf4; }
-.mock__row--lg { height: 28px; background: linear-gradient(90deg, var(--accent-soft), #e8edf4); }
-.mock__row--sm { width: 60%; }
-.mock__card { height: 68px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); }
-.mock__card--offset { transform: translateX(18%); }
+.carousel__slide.is-active { opacity: 1; z-index: 1; }
+.carousel__slide img { width: 100%; height: auto; object-fit: contain; display: block; }
+.carousel__watermark {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+.carousel__dots {
+  position: absolute; bottom: 0.9rem; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 0.4rem;
+  z-index: 2;
+}
+.carousel__dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.carousel__dot.is-active { background: #fff; transform: scale(1.25); }
 
 /* ================= CARDS ================= */
 .cards { display: grid; gap: var(--space-3); }

@@ -30,4 +30,25 @@
   /* ======== Año dinámico ======== */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ======== Carrusel del proyecto estrella ======== */
+  var slides = document.querySelectorAll(".carousel__slide");
+  var dots = document.querySelectorAll(".carousel__dot");
+
+  if (slides.length > 1) {
+    var current = 0;
+    var interval = 4000;
+
+    function showSlide(index) {
+      slides[current].classList.remove("is-active");
+      if (dots[current]) dots[current].classList.remove("is-active");
+      current = index;
+      slides[current].classList.add("is-active");
+      if (dots[current]) dots[current].classList.add("is-active");
+    }
+
+    setInterval(function () {
+      showSlide((current + 1) % slides.length);
+    }, interval);
+  }
 })();
