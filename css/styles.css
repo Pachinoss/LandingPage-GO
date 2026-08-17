@@ -40,6 +40,7 @@
 html { scroll-behavior: smooth; }
 
 body {
+  overflow-x: clip;
   font-family: var(--font);
   background: var(--bg);
   color: var(--text);
@@ -265,7 +266,7 @@ a { color: inherit; text-decoration: none; }
 .tag--sm { padding: 0.22rem 0.7rem; font-size: 0.72rem; }
 
 /* Carrusel del proyecto */
-.featured__visual { display: none; }
+.featured__visual { display: block; }
 .carousel {
   position: relative;
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -361,7 +362,35 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem; color: var(--text-muted);
 }
 
-/* ================= RESPONSIVE (progresivo) ================= */
+/* ================= RESPONSIVE (mobile-first) ================= */
+
+/* Pantallas muy pequeñas (< 480px) */
+@media (max-width: 479px) {
+  .container { padding-inline: 1.1rem; }
+  .hero__inner { padding-block: var(--space-4); gap: var(--space-3); }
+  .hero__title { font-size: clamp(2.4rem, 16vw, 3rem); }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+  .featured { padding: var(--space-3); gap: var(--space-3); }
+  .section { padding-block: calc(var(--space-5) * 0.72); }
+  .contact__item { grid-template-columns: auto 1fr; gap: 0.1rem var(--space-2); }
+  .card { padding: var(--space-3); }
+  .carousel__track { height: 300px; }
+  .carousel__slide,
+  .carousel__slide img { height: 100%; }
+  .carousel__slide img { object-fit: cover; }
+}
+
+/* Configuración base: móvil (táctil ≥ 44px) */
+.nav__toggle {
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tabletas ≥ 640px */
 @media (min-width: 640px) {
   .nav__toggle { display: none; }
   .nav__menu {
@@ -373,8 +402,10 @@ a { color: inherit; text-decoration: none; }
   .nav__link:hover { background: none; color: var(--accent); }
   .cards { grid-template-columns: repeat(2, 1fr); }
   .contact { grid-template-columns: repeat(2, 1fr); }
+  .specs { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Desktop ≥ 900px */
 @media (min-width: 900px) {
   .hero__inner { grid-template-columns: 1.5fr 1fr; align-items: center; gap: var(--space-5); }
   .hero__side { grid-template-columns: auto 1fr; align-items: center; gap: var(--space-3); }
@@ -383,8 +414,15 @@ a { color: inherit; text-decoration: none; }
   .split { grid-template-columns: 1fr 1fr; }
   .specs { grid-template-columns: repeat(3, 1fr); }
   .featured { grid-template-columns: 1.3fr 1fr; align-items: center; }
-  .featured__visual { display: block; }
   .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; align-items: start; }
+}
+
+/* Desktop grande ≥ 1024px */
+@media (min-width: 1024px) {
+  .container { max-width: 1200px; }
+  .cards { grid-template-columns: repeat(4, 1fr); }
+  .section { padding-block: calc(var(--space-5) * 1.2); }
+  .hero__links { gap: 0.4rem; }
 }
 
 /* Respeta la preferencia de animación reducida */
