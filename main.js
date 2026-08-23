@@ -34,10 +34,29 @@
   var header = document.getElementById("header");
   function onScrollHeader() {
     if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 10);
+    if (window.scrollY > 50) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
   }
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   onScrollHeader();
+
+  // ======== Carousel Simple ========
+  var carousel = document.getElementById("carousel");
+  if (carousel) {
+    var slides = carousel.querySelectorAll(".carousel__slide");
+    var currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove("is-active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("is-active");
+    }
+
+    setInterval(nextSlide, 4000);
+  }
 
   // ======== Animación reveal al entrar en viewport ========
   var revealEls = document.querySelectorAll(".reveal");
@@ -81,7 +100,78 @@
   window.addEventListener("scroll", onScrollSpy, { passive: true });
   onScrollSpy();
 
-  // ======== Año dinámico en el footer ========
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  // ======== Gestión del Modal ========
+  var modal = document.getElementById("demo-modal");
+  var openBtns = document.querySelectorAll(".open-modal-trigger");
+  var closeBtn = document.getElementById("close-modal");
+
+  function openModal() {
+    if (modal) modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (modal) modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  openBtns.forEach(function(btn) {
+    btn.addEventListener("click", openModal);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+  if (modal) {
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  // ======== Envío del Formulario (Web3Forms) ========
+  var form = document.getElementById("demo-form");
+  var status = document.getElementById("form-status");
+
+  if (form) {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      var formData = new FormData(form);
+      var object = Object.fromEntries(formData);
+      var json = JSON.stringify(object);
+
+      if (status) {
+        status.textContent = "Enviando...";
+        status.style.color = "var(--c-text)";
+      }
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: json
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          if (status) {
+            status.textContent = "¡Solicitud enviada con éxito! Te contactaremos pronto.";
+            status.style.color = "#22c55e";
+          }
+          form.reset();
+          setTimeout(closeModal, 3000);
+        } else {
+          console.log(response);
+          if (status) {
+            status.textContent = json.message;
+            status.style.color = "#ef4444";
+          }
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        if (status) status.textContent = "Algo salió mal. Por favor, inténtalo de nuevo.";
+      });
+    });
+  }
 })();
