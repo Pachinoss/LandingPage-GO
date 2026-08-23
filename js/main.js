@@ -8,21 +8,25 @@
   if (toggle && menu) {
     toggle.addEventListener("click", function () {
       var open = menu.classList.toggle("is-open");
+      toggle.classList.toggle("is-active", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+      document.body.style.overflow = open ? "hidden" : "";
     });
 
-    menu.querySelectorAll(".nav__link").forEach(function (link) {
+    menu.querySelectorAll(".nav__link, .open-modal-trigger").forEach(function (link) {
       link.addEventListener("click", function () {
         menu.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+        toggle.classList.remove("is-active");
+        document.body.style.overflow = "";
       });
     });
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
         menu.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
+        toggle.classList.remove("is-active");
+        document.body.style.overflow = "";
       }
     });
   }
