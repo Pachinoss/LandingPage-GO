@@ -7,3 +7,11 @@
 @media(max-width:850px){.hero{padding-top:50px}.section{padding:78px 0}.contact-box{padding:42px 34px}}
 @media(max-width:680px){.hero{padding-top:48px}.hero-art{height:345px}.section{padding:68px 0}.product-card{min-height:420px;padding:25px}.product-symbol{margin-top:32px}.contact-section{padding-bottom:60px}}
 .logo-dot{color:#315bea;background:transparent}.product-status--soon i{background:#a9b5c9;box-shadow:none}
+
+/* Portfolio: tres proyectos con una cuadrícula adaptable. */
+.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.product-card h3{font-size:clamp(1.85rem,2.7vw,2.8rem)}
+.product-card--constructor{background:#edf0f7}
+.product-symbol--constructor{color:#526a99}
+@media(min-width:681px) and (max-width:1050px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card--constructor{grid-column:1 / -1}}
+@media(max-width:680px){.product-grid{grid-template-columns:minmax(0,1fr)}.product-card h3{font-size:2.4rem}}
