@@ -1228,6 +1228,12 @@ h2 em {
 }
 
 /* Portfolio: tres proyectos con una cuadrícula adaptable. */
+@media(min-width:1051px) {
+    #productos > .container {
+        width: min(1400px, calc(100% - 64px));
+    }
+}
+
 .arcade-break {
     display: flex;
     justify-content: flex-end;
