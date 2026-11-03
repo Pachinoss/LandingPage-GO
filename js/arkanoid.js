@@ -83,7 +83,7 @@
             state = 'level'; overlay('¡TABLERO COMPLETADO!', 'Nivel superado.', `Llevas ${score} puntos. ¿Vamos a por el nivel ${level + 1}?`, 'Siguiente nivel');
             message('Nivel completado.');
           } else {
-            state = 'won'; overlay('REFLEJOS EN PLENA FORMA', '¡Has ganado!', `Tres niveles y ${score} puntos. Gracias por acompañarnos mientras actualizamos la web.`, 'Jugar otra vez');
+            state = 'won'; overlay('REFLEJOS EN PLENA FORMA', '¡Has ganado!', `Tres niveles y ${score} puntos. ¡Has roto todos los bloques! ¿Te animas a repetir?`, 'Jugar otra vez');
             message(`¡Victoria! ${score} puntos.`);
           }
           sync();
