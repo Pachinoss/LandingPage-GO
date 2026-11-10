@@ -17,7 +17,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261103-slide">
+  <script src="./js/theme.js?v=20261110" ></script>
+  <link rel="stylesheet" href="./styles.css?v=20261110">
+  <link rel="stylesheet" href="./css/theme.css?v=20261110">
 </head>
 
 <body>
@@ -30,6 +32,7 @@
           href="#metodo">Cómo trabajo</a><a href="#contacto">Contacto</a><button
           class="button button--small button--dark open-modal-trigger">Hablemos <span
             aria-hidden="true">↗</span></button></nav>
+      <label class="theme-control"><span class="sr-only">Tema de la página</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/><path d="M12 4a8 8 0 0 1 0 16" fill="currentColor" stroke="none"/></svg><select id="theme-select" aria-label="Tema de la página"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
     </div>
   </header>
   <main>
@@ -78,13 +81,13 @@
               aria-label="Capturas de Hostelería QR">
               <div class="carousel-viewport">
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3"><img
-                    src="./img/qr1.png" alt="Captura 1 de la web de Hostelería QR" width="1880" height="940"
+                    src="./img/qr1.webp" alt="Captura 1 de la web de Hostelería QR" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
-                  <img src="./img/qr2.png" alt="Captura 2 de la web de Hostelería QR" width="1880" height="940"
+                  <img src="./img/qr2.webp" alt="Captura 2 de la web de Hostelería QR" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
-                  <img src="./img/qr3.png" alt="Captura 3 de la web de Hostelería QR" width="1880" height="940"
+                  <img src="./img/qr3.webp" alt="Captura 3 de la web de Hostelería QR" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
               </div>
               <div class="carousel-controls"><button type="button" class="carousel-arrow" data-direction="-1"
@@ -113,13 +116,13 @@
               aria-label="Capturas de MotorPerformance">
               <div class="carousel-viewport">
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3"><img
-                    src="./img/taller1.png" alt="Captura 1 de la web de MotorPerformance" width="1880" height="940"
+                    src="./img/taller1.webp" alt="Captura 1 de la web de MotorPerformance" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
-                  <img src="./img/taller2.png" alt="Captura 2 de la web de MotorPerformance" width="1880" height="940"
+                  <img src="./img/taller2.webp" alt="Captura 2 de la web de MotorPerformance" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
-                  <img src="./img/taller3.png" alt="Captura 3 de la web de MotorPerformance" width="1880" height="940"
+                  <img src="./img/taller3.webp" alt="Captura 3 de la web de MotorPerformance" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
               </div>
               <div class="carousel-controls"><button type="button" class="carousel-arrow" data-direction="-1"
@@ -149,13 +152,13 @@
               aria-label="Capturas de Don Constructor">
               <div class="carousel-viewport">
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3"><img
-                    src="./img/don1.png" alt="Captura 1 de la web de Don Constructor" width="1880" height="940"
+                    src="./img/don1.webp" alt="Captura 1 de la web de Don Constructor" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3" hidden>
-                  <img src="./img/don2.png" alt="Captura 2 de la web de Don Constructor" width="1880" height="940"
+                  <img src="./img/don2.webp" alt="Captura 2 de la web de Don Constructor" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
                 <div class="project-slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 3" hidden>
-                  <img src="./img/don3.png" alt="Captura 3 de la web de Don Constructor" width="1880" height="940"
+                  <img src="./img/don3.webp" alt="Captura 3 de la web de Don Constructor" width="1880" height="940"
                     loading="lazy" decoding="async"></div>
               </div>
               <div class="carousel-controls"><button type="button" class="carousel-arrow" data-direction="-1"
@@ -260,7 +263,9 @@
       </form>
     </div>
   </div>
-  <script src="./main.js?v=20261103-slide"></script>
+  <script src="./main.js?v=20261110"></script>
+  <script src="./js/visit-config.js?v=20261110"></script>
+  <script src="./js/visits.js?v=20261110" defer></script>
 </body>
 
 </html>

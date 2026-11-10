@@ -6,11 +6,13 @@
   <title>Arkanoid — Germán Orozco</title>
   <meta name="description" content="Una pausa para jugar: disfruta de Arkanoid con tres niveles, vidas y puntuación.">
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <script src="./js/theme.js?v=20261110"></script>
   <link rel="stylesheet" href="./css/arkanoid.css">
+  <link rel="stylesheet" href="./css/arkanoid-theme.css?v=20261110">
   <script src="./js/arkanoid.js" defer></script>
 </head>
 <body>
-  <header class="header"><a href="./index.html#productos" class="back">← Volver al portfolio</a><span class="brand">Germán <strong>Orozco</strong></span></header>
+  <header class="header"><a href="./index.html#productos" class="back">← Volver al portfolio</a><span class="brand">Germán <strong>Orozco</strong></span><label class="theme-control"><span class="sr-only">Tema de la página</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v16"/><path d="M12 4a8 8 0 0 1 0 16" fill="currentColor" stroke="none"/></svg><select id="theme-select" aria-label="Tema de la página"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Oscuro</option></select></label></header>
   <main>
     <section class="intro" aria-labelledby="title">
       <p class="eyebrow"><span></span> Una pausa para jugar</p>
@@ -31,5 +33,7 @@
     <p class="closing">Una bola, tres vidas y un reto. ¿Hasta dónde llegas?</p>
   </main>
   <footer>Germán Orozco <span>·</span> Productos digitales para negocios reales.</footer>
+  <script src="./js/visit-config.js?v=20261110"></script>
+  <script src="./js/visits.js?v=20261110" defer></script>
 </body>
 </html>
