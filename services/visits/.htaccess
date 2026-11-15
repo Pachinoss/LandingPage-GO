@@ -1,0 +1,4 @@
+Options -Indexes
+<Files "VisitLog.php">
+    Require all denied
+</Files>
