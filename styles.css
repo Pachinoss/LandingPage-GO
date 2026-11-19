@@ -1227,7 +1227,7 @@ h2 em {
     box-shadow: none
 }
 
-/* Portfolio: tres proyectos con una cuadrícula adaptable. */
+/* Portfolio: cuatro proyectos con una cuadrícula adaptable. */
 .project-carousel {
     margin: 24px 0 8px;
     min-width: 0;
@@ -1386,7 +1386,7 @@ h2 em {
 }
 
 .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr))
+    grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 
 .product-card h3 {
@@ -1407,7 +1407,7 @@ h2 em {
     }
 
     .product-card--constructor {
-        grid-column: 1 / -1
+        grid-column: auto
     }
 }
 
